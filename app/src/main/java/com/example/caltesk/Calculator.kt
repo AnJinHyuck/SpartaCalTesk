@@ -44,8 +44,10 @@ open class Calculator() {
                 DoubleCalculator2().case2(firstInput.toInt(),secondInput.toDouble(),operator)
                 continue
             }
+            // 수정전 : continue가 없어서 무한 반복이 안됨.
 
             var num2 = secondInput.toIntOrNull()
+            // 수정 전: var num2 = readln.toIntorNull()
 
             while (num2 == null) {
                 println("두 번째 숫자를 입력하세요")
@@ -75,8 +77,8 @@ fun result(num1: Int, num2: Int, operator: String?) {
     println("결과는 ${result}")
 }
 
-// 소수 + 소수 무한반복됨
-// 정수 + 정수 = 2번째 값에서 다시 입력해야하는 오류
-// 소수 + 정수 = 무한반복 됨
-// 정수 + 소수 = 한번만 계산 후 꺼짐
-// 세컨 더블 칼을 만들어서 정수 + 다른 계산식 만들기
+// 소수 + 소수 무한반복됨 V
+// 정수 + 정수 = 2번째 값에서 다시 입력해야하는 오류 V
+// 소수 + 정수 = 무한반복 됨 V
+// 정수 + 소수 = 한번만 계산 후 꺼짐 V
+// 세컨 더블 칼을 만들어서 정수 + 다른 계산식 만들기 V
